@@ -22,14 +22,14 @@ namespace ProductOrderSite.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Contact page.";
 
             return View();
         }
 
         public ActionResult Orders()
         {
-            ViewBag.Message = "Your orders page";
+            ViewBag.Message = "Orders page";
 
             return View();
         }
