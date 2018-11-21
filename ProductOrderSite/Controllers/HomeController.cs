@@ -13,9 +13,9 @@ namespace ProductOrderSite.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Catalog()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Place your orders here";
 
             return View();
         }
@@ -27,9 +27,9 @@ namespace ProductOrderSite.Controllers
             return View();
         }
 
-        public ActionResult Shopping()
+        public ActionResult Orders()
         {
-            ViewBag.Message = "Your shopping page.";
+            ViewBag.Message = "Your orders page";
 
             return View();
         }
