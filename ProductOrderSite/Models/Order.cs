@@ -9,7 +9,7 @@ namespace ProductOrderSite.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public Guid Id { get; set; }
-
+        public int OrderId { get; set; }
         public int CustomerId { get; set; }
         public int ProductId { get; set; }
         public DateTime DeliveryDate { get; set; }
