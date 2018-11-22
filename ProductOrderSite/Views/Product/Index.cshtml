@@ -1,11 +1,14 @@
 ﻿@model IEnumerable<ProductOrderSite.Models.Product>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Products";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>@ViewBag.Title</h2>
+<br />
+<h5>Place your orders from here</h5>
+
 
 <p>
     @Html.ActionLink("Create New", "Create")
