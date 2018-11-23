@@ -27,7 +27,13 @@
             @Html.LabelFor(model => model.ProductId, "Product", htmlAttributes: new { @class = "control-label col-md-2" })
             @Html.DropDownList("ProductId", null, htmlAttributes: new { @class = "form-control" })
             @Html.ValidationMessageFor(model => model.ProductId, "", new { @class = "text-danger" })
-            <input type="button" value="Add Product" onclick="var row = document.getElementById('productstable').insertRow(-1); var idElem = document.getElementById('ProductId'); row.innerHTML = '<td>' +  idElem.options[idElem.selectedIndex].text; + '</td></td>'" class="btn btn-default">
+            <input type="button"
+                   value="Add Product"
+                   onclick="var row = document.getElementById('productstable').insertRow(-1);
+                   var idElem=document.getElementById('ProductId');
+                   row.innerHTML='<td>' + idElem.options[idElem.selectedIndex].text; +
+                   '<td> input type=&quot;button&quot; value = &quot;Delete&quot; onclick = &quot; var row=document.getElementById(&apos;productstable&apos;).deleteRow(-1); var idElem = document.getElementById(&aposProductId&apos)</td></td>' '</td>' " " +
+                   "class=" btn btn-default">
             <table id="productstable">
                 <tr>
                     <th>
