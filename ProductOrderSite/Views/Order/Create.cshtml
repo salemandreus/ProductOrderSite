@@ -25,11 +25,9 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.ProductId, "Product", htmlAttributes: new { @class = "control-label col-md-2" })
-            < class="col-md-10">
             @Html.DropDownList("ProductId", null, htmlAttributes: new { @class = "form-control" })
             @Html.ValidationMessageFor(model => model.ProductId, "", new { @class = "text-danger" })
-            <input type="button" value="Add Product"
-                   onclick="var row = document.getElementById('productstable').insertRow(0); row.innerHTML = '<td>' +  (document.getElementById('ProductId').val()) + '</td></td>'" class="btn btn-default">
+            <input type="button" value="Add Product" onclick="var row = document.getElementById('productstable').insertRow(-1); var idElem = document.getElementById('ProductId'); row.innerHTML = '<td>' +  idElem.options[idElem.selectedIndex].text; + '</td></td>'" class="btn btn-default">
             <table id="productstable">
                 <tr>
                     <th>
@@ -40,6 +38,7 @@
                     <td>
                         @Html.DisplayFor(modelItem => Model.ProductId)
                     </td>
+                    <td></td>
                 </tr>
             </table>
         </div>
