@@ -21,6 +21,13 @@ namespace ProductOrderSite.Controllers
             return View(db.Products.ToList());
         }
 
+        public ActionResult CreateOrder()
+        {
+            ViewBag.CustomerId = new SelectList(db.Customers, "Id", "LastName");
+            ViewBag.ProductId = new SelectList(db.Products, "Id", "Name");
+            return View();
+        }
+
         // GET: Product/Details/5
         public ActionResult Details(int? id)
         {
