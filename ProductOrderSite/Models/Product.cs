@@ -6,8 +6,10 @@ namespace ProductOrderSite.Models
 {
     public class Product
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
         public int Id { get; set; }
+
         public string Name { get; set; }
         public string Description { get; set; }
 
@@ -16,6 +18,5 @@ namespace ProductOrderSite.Models
         public decimal Price { get; set; }
 
         public virtual ICollection<Order> Orders { get; set; }
-
     }
 }

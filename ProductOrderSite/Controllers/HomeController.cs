@@ -10,26 +10,12 @@ namespace ProductOrderSite.Controllers
     {
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult Catalog()
-        {
-            ViewBag.Message = "Place your orders here";
-
-            return View();
+            return RedirectToAction("Index", "Product");
         }
 
         public ActionResult Contact()
         {
             ViewBag.Message = "Contact page.";
-
-            return View();
-        }
-
-        public ActionResult Orders()
-        {
-            ViewBag.Message = "Orders page";
 
             return View();
         }
