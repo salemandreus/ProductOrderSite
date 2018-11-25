@@ -1,4 +1,5 @@
-﻿@model ProductOrderSite.Models.Order
+﻿@using ProductOrderSite.Models
+@model ProductOrderSite.Models.Order
 
 @{
     ViewBag.Title = "Create your Order";
@@ -30,7 +31,7 @@
             <table id="productstable">
                 <tr>
                     <th>
-                        @Html.DisplayNameFor(model => model.ProductId)
+                        Order List
                     </th>
                 </tr>
                 <tr>
