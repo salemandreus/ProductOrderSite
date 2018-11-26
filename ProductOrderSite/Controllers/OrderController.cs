@@ -16,7 +16,12 @@ namespace ProductOrderSite.Controllers
     {
         private SiteContext db = new SiteContext();
 
-        // GET: Order
+        /* public ActionResult Index()
+         {
+             return View(db.Orders.ToList());
+         }*/
+
+        // GET: Orders
         public ActionResult Index()
         {
             var orders = (from o in db.Orders
@@ -38,7 +43,6 @@ namespace ProductOrderSite.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-
             Order orderIdRef = db.Orders.Find(id);
             if (orderIdRef == null)
             {
@@ -59,6 +63,8 @@ namespace ProductOrderSite.Controllers
         {
             ViewBag.CustomerId = new SelectList(db.Customers, "Id", "LastName", order.CustomerId);
             ViewBag.ProductId = new SelectList(db.Products, "Id", "Name", order.ProductId);
+            ViewBag.OrderId = new SelectList(db.Orders, "Id", "OrderID", order.OrderId);
+
             return View(order);
         }
 
@@ -67,6 +73,7 @@ namespace ProductOrderSite.Controllers
         {
             ViewBag.CustomerId = new SelectList(db.Customers, "Id", "LastName");
             ViewBag.ProductId = new SelectList(db.Products, "Id", "Name");
+            ViewBag.OrderId = new SelectList(db.Orders, "Id", "OrderId");
             return View();
         }
 
@@ -75,7 +82,8 @@ namespace ProductOrderSite.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CustomerId,Products,DeliveryDate")] Order order)
+        //public ActionResult Create([Bind(Include = "CustomerId,Products,DeliveryDate")] Order order)
+        public ActionResult Create([Bind(Include = "Id,CustomerId,ProductId,DeliveryDate")] Order order)
         {
             if (ModelState.IsValid)
             {
