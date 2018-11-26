@@ -35,18 +35,18 @@ namespace ProductOrderSite.DAL
             context.SaveChanges();
             var orders = new List<Order>
             {
-            new Order{OrderId=1,CustomerId=1,ProductId=1,DeliveryDate=DateTime.Parse("2018-12-20")},
-            new Order{OrderId=1,CustomerId=1,ProductId=2,DeliveryDate=DateTime.Parse("2018-12-13")},
-            new Order{OrderId=1,CustomerId=1,ProductId=3,DeliveryDate=DateTime.Parse("2018-12-13")},
-            new Order{OrderId=2,CustomerId=2,ProductId=4,DeliveryDate=DateTime.Parse("2018-12-13")},
-            new Order{OrderId=2,CustomerId=2,ProductId=5,DeliveryDate=DateTime.Parse("2018-12-13")},
-            new Order{OrderId=2,CustomerId=2,ProductId=6,DeliveryDate=DateTime.Parse("2018-12-13")},
-            new Order{OrderId=3,CustomerId=3,ProductId=7,DeliveryDate=DateTime.Parse("2018-12-20")},
-            new Order{OrderId=3,CustomerId=3,ProductId=1,DeliveryDate=DateTime.Parse("2018-12-20")},
-            new Order{OrderId=3,CustomerId=3,ProductId=2,DeliveryDate=DateTime.Parse("2018-12-20")},
-            new Order{OrderId=4,CustomerId=5,ProductId=3,DeliveryDate=DateTime.Parse("2018-12-20")},
-            new Order{OrderId=4,CustomerId=5,ProductId=4,DeliveryDate=DateTime.Parse("2018-12-20")},
-            new Order{OrderId=4,CustomerId=5,ProductId=5,DeliveryDate=DateTime.Parse("2018-12-20")},
+            new Order{OrderId=975371,CustomerId=1,ProductId=1,DeliveryDate=DateTime.Parse("2018-12-20")},
+            new Order{OrderId=975371,CustomerId=1,ProductId=2,DeliveryDate=DateTime.Parse("2018-12-13")},
+            new Order{OrderId=975371,CustomerId=1,ProductId=3,DeliveryDate=DateTime.Parse("2018-12-13")},
+            new Order{OrderId=2257975,CustomerId=2,ProductId=4,DeliveryDate=DateTime.Parse("2018-12-13")},
+            new Order{OrderId=2257975,CustomerId=2,ProductId=5,DeliveryDate=DateTime.Parse("2018-12-13")},
+            new Order{OrderId=2257975,CustomerId=2,ProductId=6,DeliveryDate=DateTime.Parse("2018-12-13")},
+            new Order{OrderId=3527833,CustomerId=3,ProductId=7,DeliveryDate=DateTime.Parse("2018-12-20")},
+            new Order{OrderId=3527833,CustomerId=3,ProductId=1,DeliveryDate=DateTime.Parse("2018-12-20")},
+            new Order{OrderId=3527833,CustomerId=3,ProductId=2,DeliveryDate=DateTime.Parse("2018-12-20")},
+            new Order{OrderId=4963465,CustomerId=5,ProductId=3,DeliveryDate=DateTime.Parse("2018-12-20")},
+            new Order{OrderId=4963465,CustomerId=5,ProductId=4,DeliveryDate=DateTime.Parse("2018-12-20")},
+            new Order{OrderId=4963465,CustomerId=5,ProductId=5,DeliveryDate=DateTime.Parse("2018-12-20")},
             };
             orders.ForEach(s => context.Orders.Add(s));
             context.SaveChanges();

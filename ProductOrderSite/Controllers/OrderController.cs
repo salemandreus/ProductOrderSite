@@ -83,11 +83,15 @@ namespace ProductOrderSite.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         //public ActionResult Create([Bind(Include = "CustomerId,Products,DeliveryDate")] Order order)
-        public ActionResult Create([Bind(Include = "Id,CustomerId,ProductId,DeliveryDate")] Order order)
+        public ActionResult Create([Bind(Include = "CustomerId,ProductId,DeliveryDate")] Order order)
         {
             if (ModelState.IsValid)
             {
                 order.Id = Guid.NewGuid();
+                // NB! I ran out of time here to better familiarise myself with querying in EntityFramework so I had to improvise an ID generator
+                ////for demo prototyping purposes. Ordinarily I would certainly not simply use a random number generator to create unique IDs!
+                Random random = new Random();
+                order.OrderId = random.Next(1000000, 9000000);
                 db.Orders.Add(order);
                 db.SaveChanges();
                 return RedirectToAction("Index", "Order");
