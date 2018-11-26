@@ -63,7 +63,7 @@ namespace ProductOrderSite.Controllers
         {
             ViewBag.CustomerId = new SelectList(db.Customers, "Id", "LastName", order.CustomerId);
             ViewBag.ProductId = new SelectList(db.Products, "Id", "Name", order.ProductId);
-            ViewBag.OrderId = new SelectList(db.Orders, "Id", "OrderID", order.OrderId);
+            //    ViewBag.OrderId = new SelectList(db.Orders, "Id", "OrderID", order.OrderId);
 
             return View(order);
         }
@@ -73,7 +73,7 @@ namespace ProductOrderSite.Controllers
         {
             ViewBag.CustomerId = new SelectList(db.Customers, "Id", "LastName");
             ViewBag.ProductId = new SelectList(db.Products, "Id", "Name");
-            ViewBag.OrderId = new SelectList(db.Orders, "Id", "OrderId");
+            //    ViewBag.OrderId = new SelectList(db.Orders, "Id", "OrderId");
             return View();
         }
 
