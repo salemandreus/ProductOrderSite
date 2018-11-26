@@ -9,7 +9,7 @@ namespace ProductOrderSite.Models
         [DisplayName("Client's Id")]
         public int Id { get; set; }
 
-        [DisplayName("Surname/Company")]
+        [DisplayName("Surname/ Company")]
         public string LastName { get; set; }
 
         [DisplayName("First Names")]

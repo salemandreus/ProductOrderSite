@@ -25,14 +25,7 @@
 
                     @Html.DropDownList("ProductId", null, htmlAttributes: new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.ProductId, "", new { @class = "text-danger" })
-                <br/>
-                    <input type="button" value="Add Product" onclick="var row = document.getElementById('productstable').insertRow(-1); var idElem = document.getElementById('ProductId'); row.innerHTML = '<td>' +  idElem.options[idElem.selectedIndex].text; + '</td></td>'" class="btn btn-success">
                     <table id="productstable">
-                        <tr>
-                            <th>
-                                Order List
-                            </th>
-                        </tr>
                         <tr>
                             <td>
                                 @Html.DisplayFor(modelItem => Model.ProductId)
